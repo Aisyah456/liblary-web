@@ -11,9 +11,20 @@ import {
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { dashboard } from '@/routes';
+import faculties from '@/routes/faculties';
+import majors from '@/routes/majors';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import {
+    BookOpen,
+    ClipboardListIcon,
+    Folder,
+    GitBranchIcon,
+    LandmarkIcon,
+    LayoutGrid,
+    TargetIcon,
+    UsersIcon,
+} from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -22,6 +33,27 @@ const mainNavItems: NavItem[] = [
         href: dashboard(),
         icon: LayoutGrid,
     },
+    {
+        title: 'Fakultas',
+        href: faculties.index(),
+        icon: LandmarkIcon,
+    },
+    {
+        title: 'Program Studi',
+        href: majors.index(),
+        icon: TargetIcon,
+    },
+    {
+        title: 'Struktur Organisasi',
+        href: '#',
+        icon: GitBranchIcon,
+    },
+    {
+        title: 'Tugas & Fungsi',
+        href: '#',
+        icon: ClipboardListIcon,
+    },
+    { title: 'Staff', href: '#', icon: UsersIcon },
 ];
 
 const footerNavItems: NavItem[] = [
